@@ -19,4 +19,5 @@
 5. Run the project: "npm start".
 6. The project is running on PORT 3000.
 7. Go to "localhost:3000" to use the website.
-8. Contact me if you're in troubles.
+8. I can't upload all of my template to github, you should customize one or contact me, i will send mine to your email.
+9. Contact me if you're in troubles.
