@@ -1,0 +1,41 @@
+extends layout
+
+block content
+ .container
+  .row
+    // Blog Entries Column    
+    .col-md-12
+      h1.my-4
+         | Add a post
+         ul.errors
+          if errors
+           each error, i in errors
+            li.alert.alert-danger #{error.msg}
+      // Blog Post
+      form(method='post', action='/posts/add', enctype="multipart/form-data")
+        .form-group
+          h6
+            label(for='usr') Title:
+          input#usr.form-control(type='text', name='title')       
+        .form-group
+          h6
+            label(for='exampleFormControlSelect1') Category
+            select#exampleFormControlSelect1.form-control(name='category')
+             each category, i in categories
+              option(value='#{category.name}') #{category.name}
+        .form-group
+          h6
+            label(for='exampleFormControlTextarea1') Body
+          textarea#exampleFormControlTextarea1.form-control(name='body', rows='3')
+        .form-group
+          h6
+            label(for='exampleFormControlFile1') Image
+          input#exampleFormControlFile1.form-control-file(name='image', type='file')
+        .form-group
+          h6
+            label(for='usr') Author:
+          input#usr.form-control(type='text', name='author')
+        button.btn.btn-primary.btn-lg(type='submit') Post
+        script(src='/ckeditor/ckeditor.js')
+        script
+         | CKEDITOR.replace('body');

@@ -1,0 +1,85 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    |     
+    meta(name='description', content='')
+    |     
+    meta(name='author', content='')
+    |     
+    title Cattone - Catto brings you some news!
+    // Bootstrap core CSS
+    link(href='/vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')    
+    // Custom styles for this template
+    link(href='/css/blog-home.css', rel='stylesheet')
+  |   
+  body
+    // Navigation
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        <a class="navbar-brand" href="/">Cattone</a>
+        |         
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        |         
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='/') Home
+            |             
+            li.nav-item
+              a.nav-link(href='/posts/add') Add post
+            |             
+            li.nav-item
+              a.nav-link(href='/categories/add') Add categories
+            |             
+            li.nav-item
+              a.nav-link(href='#') Contact
+    // Page Content
+    .container
+      .row
+        // Blog Entries Column
+        .col-md-8          
+          // Blog Post
+          .card-body
+          != messages()
+           block content                    
+          // Pagination
+          ul.pagination.justify-content-center.mb-4
+            li.page-item
+              a.page-link(href='#') &larr; Older
+            |             
+            li.page-item.disabled
+              a.page-link(href='#') Newer &rarr;
+        // Sidebar Widgets Column
+        .col-md-4
+          // Search Widget
+          .card.my-4
+            h5.card-header Search
+            |             
+            .card-body
+              .input-group
+                input.form-control(type='text', placeholder='Search for...')
+                |                 
+                span.input-group-btn
+                  button.btn.btn-secondary(type='button') Go!          
+          // Side Widget
+          .card.my-4
+            h5.card-header Side Widget
+            |             
+            .card-body
+              | You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+      // /.row
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright &copy; Your Website 2017
+      // /.container
+    // Bootstrap core JavaScript
+    script(src='/vendor/jquery/jquery.min.js')
+    |     
+    script(src='/vendor/bootstrap/js/bootstrap.bundle.min.js')
+

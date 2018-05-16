@@ -1,0 +1,18 @@
+extends layout
+
+block content
+ if posts
+  each post, i in posts
+   .post    
+    img.card-img-top(src='/images/#{post.image}', alt='Card image cap')    
+    h2.card-title 
+     a(href='/posts/show/#{post._id}')
+      =post.title
+    p.card-text Category: 
+       a(href='/categories/show/#{post.category}') #{post.category}
+       p
+        != truncateText(post.body, 200) + '...'
+     a.btn.btn-primary(href='/posts/show/#{post._id}') Read More &rarr;
+    p.card-header.text-muted
+       | Posted on #{moment(post.date).format("MM-DD-YYYY")} by &#32;
+       a(href='#') #{post.author}

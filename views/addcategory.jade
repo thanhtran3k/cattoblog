@@ -1,0 +1,19 @@
+extends layout
+
+block content
+ .container
+  .row
+    .col-md-12
+     ul.errors
+      if errors
+       each error, i in errors
+        li.alert.alert-danger #{error.msg}
+      h1.my-4
+         | Add a post         
+      // Blog Post
+      form(method='post', action='/categories/add')
+        .form-group
+          h6
+            label(for='usr') Category's Name:
+          input#usr.form-control(type='text', name='name')
+        button.btn.btn-primary.btn-lg(type='submit') Add
