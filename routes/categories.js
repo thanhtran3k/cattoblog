@@ -18,9 +18,9 @@ router.get('/show/:category', function(req, res, next) {
 
 
 router.get('/add', function(req, res, next) {
-res.render('addcategory',{
-  	'title': 'Add Category'  			
-  });
+	res.render('addcategory',{
+  		'title': 'Add Category'  			
+  	});
 });
 
 //mapping with views
