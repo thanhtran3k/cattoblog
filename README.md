@@ -15,6 +15,8 @@
 
 - "mango" is the name of my database.
 
-3. Run the project: "npm start".
-4. The project is running on PORT 3000.
-5. Go to "localhost:3000" to use the website.
+4. Start MongoDB.
+5. Run the project: "npm start".
+6. The project is running on PORT 3000.
+7. Go to "localhost:3000" to use the website.
+8. Contact me if you're in troubles.
