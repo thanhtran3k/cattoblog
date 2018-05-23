@@ -6,7 +6,7 @@
 
 - The "contact" and "search" is not actually work, i will make those functions in the future and maybe i will do the authentication function too.
 
-# MY NOTEs
+# My notes
 1. Download my project to your personal computer.
 2. Install the packages. Open gitbash and type: "npm install express-generator -g" and wait a minute.
 3. I was linking the project to my database. If you want to change the link to my database to yours just change the variable below if you see it.
