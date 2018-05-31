@@ -4,7 +4,9 @@
 
 - In this project i was using MongoDB as database, MongoDB API monk to connect to the database, NodeJS, Express framework and Jade(Pug), Bootstrap for the front-end,...
 
-- The "contact" and "search" is not actually work, i will make those functions in the future and maybe i will do the authentication function too.
+- The "search" function is not actually working, i will make that function in the future and maybe i will do the authentication function too.
+
+- You can re-use my catto_contact for the contact function.
 
 # My notes
 1. Download my project to your personal computer.
